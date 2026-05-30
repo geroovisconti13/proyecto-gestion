@@ -1,0 +1,100 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --color-red: #f00;
+    --color-chartreue: #e1ff51;
+    --color-gun-metal: #00272c;
+    --color-maroon: #780115;
+    --color-xanthous: #f7b638;
+    --color-buttermilk: #fff2bd;
+    --color-mid-blue: #285ccc;
+    --color-lavender: #d3c5f6;
+    --color-velvet: #3b2a60;
+    --color-salmon: #ff947a;
+    --color-mid-green: #025259;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* SECCION DE EQUIPOS*/
+
+#equipos {
+    padding: 4rem;
+    background: var(--color-gun-metal);
+    height: 100vh;
+}
+
+#equipos h2 {
+    text-align: center;
+    color: var(--color-chartreue);
+    margin-bottom: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 50px;
+}
+
+.teams-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(550px, 2fr));
+    gap: 20px;
+}
+
+.team-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+/* .team-card img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    display: block;
+
+} */
+
+.team-card img {
+    width: 100%;
+    height: 350px;
+    transition: transform 0.5s ease;
+    object-fit: contain;
+}
+
+.team-card:hover img {
+    transform: scale(1.1);
+}
+
+h3 {
+    font-size: 40px;
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background: rgba(0, 0, 0, 0.75);
+
+    color: var(--color-chartreue);
+    text-align: center;
+
+    opacity: 0;
+    transition: opacity 0.4s ease;
+
+    padding: 1rem;
+}
+
+.team-card:hover .overlay {
+    opacity: 1;
+}
