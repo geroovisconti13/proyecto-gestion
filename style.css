@@ -87,3 +87,51 @@ body{
 .btn:hover{
     background-color: white;
 }
+
+/* JUGADORES */
+
+.jugadores{
+    padding: 80px 10%;
+    background-color: #1a1a1a;
+    text-align: center;
+}
+
+.jugadores h2{
+    color: #00ff66;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+.contenedor-jugadores{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.card{
+    background-color: #222;
+    width: 280px;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.card:hover{
+    transform: translateY(-10px);
+}
+
+.card img{
+    width: 100%;
+    display: block;
+}
+
+.card h3{
+    color: white;
+    margin: 15px 0 10px;
+}
+
+.card p{
+    color: #ccc;
+    margin-bottom: 20px;
+}
